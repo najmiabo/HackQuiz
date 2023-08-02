@@ -1,3 +1,3 @@
-# quiz78
+# HackQuiz
 
 > bikin website berisi quiz seputar kemerdekaan Indonesia
