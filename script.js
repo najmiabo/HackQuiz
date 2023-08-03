@@ -269,21 +269,21 @@ closeShopping.addEventListener('click', ()=>{
 let products = [
     {
         id: 1,
-        name: 'PRODUCT NAME 1',
+        name: 'KAOS POLOS',
         image: 'images/1.PNG',
-        price: 120000
+        price: 50000
     },
     {
         id: 2,
-        name: 'PRODUCT NAME 2',
+        name: 'BENDERA INDONESIA',
         image: 'images/2.PNG',
-        price: 120000
+        price: 35000
     },
     {
         id: 3,
-        name: 'PRODUCT NAME 3',
+        name: 'PELUIT PRAMUKA',
         image: 'images/3.PNG',
-        price: 220000
+        price: 15000
     }
 ];
 let listCards  = [];
