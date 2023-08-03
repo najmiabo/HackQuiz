@@ -194,6 +194,69 @@ body {
 .popup-info .btn-group .info-btn:nth-child(2):hover {
   background: rgb(138, 14, 14);
 }
+.popup-category {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 500px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px 25px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+.popup-category.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup-category h2 {
+  font-size: 35px;
+  text-align: center;
+  color: rgb(255, 3, 3);
+}
+.popup-category .btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #999;
+  margin-top: 10px;
+  padding: 15px 0 7px;
+}
+.popup-category .btn-group .category-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 145px;
+  height: 65px;
+  background: rgb(224, 15, 15);
+  border: 2px solid #4f4a68;
+  outline: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 10px black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.popup-category .btn-group .category-btn:nth-child(1) {
+  background: rgb(224, 15, 15);
+  color: #fff;
+}
+
+.popup-category .btn-group .category-btn:nth-child(1):hover {
+  background: #fff;
+  color: rgb(224, 15, 15);
+}
+
+.popup-category .btn-group .category-btn:nth-child(2):hover {
+  background: #fff;
+  color: rgb(224, 15, 15);
+}
 
 .quiz-section {
   position: relative;
@@ -739,7 +802,6 @@ input {
 }
 .header-merchandise .shopping img {
   width: 35px;
-  cursor: pointer;
 }
 .header-merchandise .shopping span {
   background: red;
@@ -815,7 +877,7 @@ input {
 .body-merchandise.active .card {
   left: calc(100% - 500px);
 }
-.body-merchandise.active .container-merchandise {
+.body-merchandise.active .container {
   transform: translateX(-200px);
 }
 .card h1 {
