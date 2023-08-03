@@ -347,10 +347,18 @@ function reloadCard() {
 
 function changeQuantity(key, quantity) {
   if (quantity == 0) {
-    delete listCards[key];
+    listCards.splice(key, 1);
   } else {
     listCards[key].quantity = quantity;
     listCards[key].price = quantity * products[key].price;
   }
   reloadCard();
 }
+
+total.addEventListener("click", () => {
+  let counter = listCard.getElementsByTagName('li').length
+  if (counter == 0) {
+    alert('Cart is empty');
+  }
+});
+

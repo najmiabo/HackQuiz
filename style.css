@@ -43,13 +43,17 @@ body {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
+.navbar .icon {
+  display: none;
+}
+
 .navbar a:hover,
 .navbar a.active {
   color: #fff;
 }
 
 .main {
-  min-height: 100vh;
+  height: 100vh;
   background: url("images/indonesia_05.jpg") no-repeat;
   background-size: cover;
   background-position: center;
