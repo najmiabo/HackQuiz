@@ -1,850 +1,890 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    color: #fff;
-    background: rgb(224, 15, 15);
-    overflow: hidden;
+  color: #fff;
+  background: rgb(224, 15, 15);
+  overflow: hidden;
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
 }
 
 .logo {
-    font-size: 32px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    filter: drop-shadow(0 0 5px #4f4a68);
+  font-size: 32px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  filter: drop-shadow(0 0 5px #4f4a68);
 }
 
 .navbar a {
-    font-size: 18px;
-    color: lightgray;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  font-size: 18px;
+  color: lightgray;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.3s;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .navbar a:hover,
 .navbar a.active {
-    color: #fff;
+  color: #fff;
 }
 
 .main {
-    min-height: 100vh;
-    background: url('images/indonesia_05.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-    pointer-events: auto;
-    transition: .3s ease;
+  min-height: 100vh;
+  background: url("images/indonesia_05.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  pointer-events: auto;
+  transition: 0.3s ease;
 }
 
 .main.active {
-    filter: blur(15px);
-    pointer-events: none;
+  filter: blur(15px);
+  pointer-events: none;
 }
 
 .container {
-    display: flex;
-    height: 100vh;
-    width: 200%;
+  display: flex;
+  height: 100vh;
+  width: 200%;
 }
 
 .home {
-    position: relative;
-    left: -50%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  left: -50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-content {
-    max-width: 600px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .home-content h1 {
-    font-size: 78px;
-    font-weight: 700;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-size: 78px;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .home-content p {
-    font-size: 25px;
-    text-align: center;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    color: #fff;
-    margin-bottom: 30px;
-    background: rgba(0, 0, 0, .4);
+  font-size: 25px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  color: #fff;
+  margin-bottom: 30px;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .home-content .start-btn {
-    width: 190px;
-    height: 55px;
-    background: rgb(224, 15, 15);
-    border: 2px solid #4f4a68;
-    outline: none;
-    border-radius: 6px;
-    box-shadow: 0 0 10px black;
-    font-size: 18px;
-    color: #fff;
-    letter-spacing: 1px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: .3s;
+  width: 190px;
+  height: 55px;
+  background: rgb(224, 15, 15);
+  border: 2px solid #4f4a68;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px black;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .home-content .start-btn:hover {
-    background: #fff;
-    box-shadow: none;
-    color: #4f4a68;
+  background: #fff;
+  box-shadow: none;
+  color: #4f4a68;
 }
 
 .popup-info {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(.9);
-    width: 500px;
-    background: #fff;
-    border-radius: 6px;
-    padding: 10px 25px;
-    opacity: 0;
-    pointer-events: none;
-    transition: .3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 500px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px 25px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
 }
 
 .popup-info.active {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .popup-info h2 {
-    font-size: 50px;
-    color: rgb(224, 15, 15);
+  font-size: 50px;
+  color: rgb(224, 15, 15);
 }
 
 .popup-info .info {
-    display: inline-block;
-    font-size: 16px;
-    color: #4f4a68;
-    margin: 4px 0;
+  display: inline-block;
+  font-size: 16px;
+  color: #4f4a68;
+  margin: 4px 0;
 }
 
 .popup-info .btn-group {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #999;
-    margin-top: 10px;
-    padding: 15px 0 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #999;
+  margin-top: 10px;
+  padding: 15px 0 7px;
 }
 
 .popup-info .btn-group .info-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-    height: 45px;
-    background: rgb(224, 15, 15);
-    border: 2px solid #4f4a68;
-    outline: none;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 16px;
-    color: #fff;
-    font-weight: 600;
-    box-shadow: 0 0 10px black;
-    cursor: pointer;
-    transition: .3s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 45px;
+  background: rgb(224, 15, 15);
+  border: 2px solid #4f4a68;
+  outline: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 10px black;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .popup-info .btn-group .info-btn:nth-child(1) {
-    background: transparent;
-    color: rgb(224, 15, 15);
+  background: transparent;
+  color: rgb(224, 15, 15);
 }
 
 .popup-info .btn-group .info-btn:nth-child(1):hover {
-    background: rgb(224, 15, 15);
-    color: #fff;
+  background: rgb(224, 15, 15);
+  color: #fff;
 }
 
 .popup-info .btn-group .info-btn:nth-child(2):hover {
-    background: rgb(138, 14, 14);
+  background: rgb(138, 14, 14);
 }
 
 .quiz-section {
-    position: relative;
-    left: -50%;
-    /* left: 0; */
-    width: 100%;
-    background: rgb(94, 9, 9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .5s ease-in-out;
-    transition-delay: .25s;
-    z-index: 100;
+  position: relative;
+  left: -50%;
+  /* left: 0; */
+  width: 100%;
+  background: rgb(94, 9, 9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.25s;
+  z-index: 100;
 }
 
 .quiz-section.active {
-    left: 0;
+  left: 0;
 }
 
 .quiz-section .quiz-box {
-    position: relative;
-    width: 500px;
-    background: transparent;
-    border: 2px solid #fff;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 30px;
-    opacity: 0;
-    pointer-events: none;
-    transform: scale(.9);
-    transition: .3s ease;
-    transition-delay: 0s;
+  position: relative;
+  width: 500px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+  transition: 0.3s ease;
+  transition-delay: 0s;
 }
 
 .quiz-section .quiz-box.active {
-    opacity: 1;
-    pointer-events: auto;
-    transform: scale(1);
-    transition: 1s ease;
-    transition-delay: 1s;
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+  transition: 1s ease;
+  transition-delay: 1s;
 }
 
 .quiz-box h1 {
-    font-size: 32px;
-    text-align: center;
-    background: linear-gradient(45deg, transparent, rgb(224, 15, 15), transparent);
-    border-radius: 6px;
+  font-size: 32px;
+  text-align: center;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgb(224, 15, 15),
+    transparent
+  );
+  border-radius: 6px;
 }
 
 .quiz-box .quiz-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    border-bottom: 2px solid rgb(224, 15, 15);
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 2px solid rgb(224, 15, 15);
+  margin-bottom: 30px;
 }
 
 .quiz-header span {
-    font-size: 18px;
-    font-weight: 500;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .quiz-header .header-score {
-    background: rgb(224, 15, 15);
-    border-radius: 3px;
-    padding: 7px;
+  background: rgb(224, 15, 15);
+  border-radius: 3px;
+  padding: 7px;
 }
 
 .quiz-box .question-text {
-    font-size: 24px;
-    font-weight: 600;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .option-list .option {
-    width: 100%;
-    padding: 12px;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    font-size: 17px;
-    border-radius: 4px;
-    margin: 15px 0;
-    cursor: pointer;
-    transition: .3s;
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  font-size: 17px;
+  border-radius: 4px;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .option-list .option:hover {
-    background: rgba(255, 255, 255, .1);
-    border-color: rgba(255, 255, 255, .1);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .option-list .option.correct {
-    background: transparent;
-    color: #00a63d;
-    border-color: #00a63d;
+  background: transparent;
+  color: #00a63d;
+  border-color: #00a63d;
 }
 
 .option-list .option.incorrect {
-    background: transparent;
-    color: #a60045;
-    border-color: #a60045;
+  background: transparent;
+  color: #a60045;
+  border-color: #a60045;
 }
 
 .option-list .option.disabled {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .quiz-box .quiz-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 2px solid rgb(224, 15, 15);
-    padding-top: 20px;
-    margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid rgb(224, 15, 15);
+  padding-top: 20px;
+  margin-top: 25px;
 }
 
 .quiz-footer .question-total {
-    font-size: 16px;
-    font-weight: 600;
-
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .quiz-footer .next-btn {
-    width: 100px;
-    height: 45px;
-    background: rgba(255, 255, 255, .1);
-    border: 2px solid rgba(255, 255, 255, .1);
-    outline: none;
-    border-radius: 6px;
-    font-size: 16px;
-    color: rgba(255, 255, 255, .3);
-    font-weight: 600;
-    cursor: pointer;
-    pointer-events: none;
-    transition: .3s;
+  width: 100px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.3s;
 }
 
 .quiz-footer .next-btn.active {
-    pointer-events: auto;
-    background: rgb(224, 15, 15);
-    border-color: rgb(224, 15, 15);
-    color: #fff;
+  pointer-events: auto;
+  background: rgb(224, 15, 15);
+  border-color: rgb(224, 15, 15);
+  color: #fff;
 }
 
 .quiz-footer .next-btn.active:hover {
-    background: #fff;
-    border-color: #999;
-    color: rgb(224, 15, 15);
+  background: #fff;
+  border-color: #999;
+  color: rgb(224, 15, 15);
 }
 
 .quiz-section .result-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(.9);
-    width: 500px;
-    background: transparent;
-    border: 2px solid rgb(224, 15, 15);
-    border-radius: 6px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: .3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 500px;
+  background: transparent;
+  border: 2px solid rgb(224, 15, 15);
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
 }
 
 .quiz-section .result-box.active {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .result-box h2 {
-    font-size: 52px;
+  font-size: 52px;
 }
 
 .result-box .percentage-container {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0 40px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0 40px;
 }
 
 .percentage-container .circular-progress {
-    position: relative;
-    width: 250px;
-    height: 250px;
-    background: conic-gradient(seagreen 3.6deg, rgba(255, 255, 255, .1) 0deg);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: conic-gradient(seagreen 3.6deg, rgba(255, 255, 255, 0.1) 0deg);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .percentage-container .circular-progress::before {
-    content: '';
-    position: absolute;
-    width: 210px;
-    height: 210px;
-    background: rgb(94, 9, 9);
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: rgb(94, 9, 9);
+  border-radius: 50%;
 }
 
 .circular-progress .progress-value {
-    position: relative;
-    font-size: 45px;
-    font-weight: 600;
+  position: relative;
+  font-size: 45px;
+  font-weight: 600;
 }
 
 .percentage-container .score-text {
-    font-size: 26px;
-    font-weight: 600;
-    margin-top: 20px;
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 20px;
 }
 
 .result-box .buttons {
-    display: flex;
+  display: flex;
 }
 
 .buttons button {
-    width: 130px;
-    height: 47px;
-    background: rgb(224, 15, 15);
-    border: 2px solid rgb(224, 15, 15);
-    outline: none;
-    border-radius: 6px;
-    font-size: 16px;
-    color: #fff;
-    font-weight: 600;
-    margin: 0 20px 20px;
-    cursor: pointer;
-    transition: .3s;
+  width: 130px;
+  height: 47px;
+  background: rgb(224, 15, 15);
+  border: 2px solid rgb(224, 15, 15);
+  outline: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  margin: 0 20px 20px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .buttons button:nth-child(1):hover {
-    background: rgb(224, 15, 15);
-    border-color: rgb(224, 15, 15);
+  background: rgb(224, 15, 15);
+  border-color: rgb(224, 15, 15);
 }
 
 .buttons button:nth-child(2) {
-    background: transparent;
-    color: rgb(224, 15, 15);
+  background: transparent;
+  color: rgb(224, 15, 15);
 }
 
 .buttons button:nth-child(2):hover {
-    background: rgb(224, 15, 15);
-    color: #fff;
+  background: rgb(224, 15, 15);
+  color: #fff;
 }
 
 .popup-todoList {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(.9);
-    width: 500px;
-    background: #fff;
-    border-radius: 6px;
-    padding: 10px 25px;
-    opacity: 0;
-    pointer-events: none;
-    transition: .3s ease;
-    color: black;
-    box-sizing: border-box;
-    padding-bottom: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 500px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px 25px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  color: black;
+  box-sizing: border-box;
+  padding-bottom: 18px;
 }
 
 .popup-todoList.active {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .popup-todoList .exit-todoList-btn {
-    padding: 5px 8px;
-    position: relative;
-    margin: 0;
-    left: 95%;
-    margin-bottom: 8px;
-    width: 40px;
-    height: 40px;
-    background: #f44336;
-    border: 2px solid #4f4a68;
-    outline: none;
-    border-radius: 6px;
-    box-shadow: 0 0 10px black;
-    font-size: 18px;
-    color: #fff;
-    letter-spacing: 1px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: .3s;
+  padding: 5px 8px;
+  position: relative;
+  margin: 0;
+  left: 95%;
+  margin-bottom: 8px;
+  width: 40px;
+  height: 40px;
+  background: #f44336;
+  border: 2px solid #4f4a68;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px black;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .popup-todoList .exit-todoList-btn:hover {
-    background: #555;
+  background: #555;
 }
 
 .popup-donateUs {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(.9);
-    width: 500px;
-    background: #fff;
-    border-radius: 6px;
-    padding: 10px 25px;
-    opacity: 0;
-    pointer-events: none;
-    transition: .3s ease;
-    color: black;
-    box-sizing: border-box;
-    padding-bottom: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 500px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px 25px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  color: black;
+  box-sizing: border-box;
+  padding-bottom: 18px;
 }
 
 .popup-donateUs.active {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .popup-donateUs img {
-    max-width: 300px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .popup-donateUs p {
-    text-align: center;
-    font-weight: 600;
-    font-size: 26px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 26px;
 }
 
 .popup-donateUs .exit-donateUs-btn {
-    padding: 5px 8px;
-    position: relative;
-    margin: 0;
-    left: 95%;
-    margin-bottom: 8px;
-    width: 40px;
-    height: 40px;
-    background: #f44336;
-    border: 2px solid #4f4a68;
-    outline: none;
-    border-radius: 6px;
-    box-shadow: 0 0 10px black;
-    font-size: 18px;
-    color: #fff;
-    letter-spacing: 1px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: .3s;
+  padding: 5px 8px;
+  position: relative;
+  margin: 0;
+  left: 95%;
+  margin-bottom: 8px;
+  width: 40px;
+  height: 40px;
+  background: #f44336;
+  border: 2px solid #4f4a68;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px black;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .popup-donateUs .exit-donateUs-btn:hover {
-    background: #555;
+  background: #555;
 }
 
 .popup-merchandise {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(.9);
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    border-radius: 6px;
-    padding: 10px 25px;
-    opacity: 0;
-    pointer-events: none;
-    transition: .3s ease;
-    color: black;
-    box-sizing: border-box;
-    padding-bottom: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px 25px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  color: black;
+  box-sizing: border-box;
+  padding-bottom: 18px;
 }
 
 .popup-merchandise.active {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .popup-merchandise .exit-merchandise-btn {
-    padding: 5px 8px;
-    position: relative;
-    margin: 0;
-    left: 97%;
-    margin-bottom: 8px;
-    width: 40px;
-    height: 40px;
-    background: #f44336;
-    border: 2px solid #4f4a68;
-    outline: none;
-    border-radius: 6px;
-    box-shadow: 0 0 10px black;
-    font-size: 18px;
-    color: #fff;
-    letter-spacing: 1px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: .3s;
+  padding: 5px 8px;
+  position: relative;
+  margin: 0;
+  left: 97%;
+  margin-bottom: 8px;
+  width: 40px;
+  height: 40px;
+  background: #f44336;
+  border: 2px solid #4f4a68;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px black;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .todo-li {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Style the list items */
 .todo-li li {
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    background: #eee;
-    font-size: 18px;
-    transition: 0.2s;
-    list-style-type: none;
-    /* make the list items unselectable */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  list-style-type: none;
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
 .todo-li li:nth-child(odd) {
-    background: #f9f9f9;
+  background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
 .todo-li li:hover {
-    background: #ddd;
+  background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
 .todo-li li.checked {
-    background: #888;
-    color: #fff;
-    text-decoration: line-through;
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
 .todo-li li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
 }
 
 /* Style the close button */
 .close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 12px 16px 12px 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
 }
 
 .close:hover {
-    background-color: #f44336;
-    color: white;
+  background-color: #f44336;
+  color: white;
 }
 
 /* Style the header */
 .header-todoList {
-    background-color: #f44336;
-    padding: 30px 40px;
-    color: white;
-    text-align: center;
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
 }
 
 /* Clear floats after the header */
 .header-todoList:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Style the input */
 input {
-    margin: 0;
-    border: none;
-    border-radius: 6px;
-    width: 75%;
-    padding: 10px;
-    float: left;
-    font-size: 16px;
+  margin: 0;
+  border: none;
+  border-radius: 6px;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
 }
 
 /* Style the "Add" button */
 .addBtn {
-    padding: 10px;
-    width: 25%;
-    background: #d9d9d9;
-    color: #555;
-    float: left;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 6px;
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 6px;
 }
 
 .addBtn:hover {
-    background-color: #bbb;
+  background-color: #bbb;
 }
 
 .body-merchandise {
-    background-color: #E3E7E8;
-    font-family: system-ui;
+  background-color: white;
+  font-family: system-ui;
 }
 
-.container-merchandise{
-    width: 1000px;
-    margin: auto;
-    transition: 0.5s;
+.container-merchandise {
+  width: 1000px;
+  margin: auto;
+  transition: 0.5s;
 }
 
-.header-merchandise{
-    display: grid;
-    grid-template-columns: 1fr 50px;
-    margin-top: 50px;
+.header-merchandise {
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  margin-top: 50px;
 }
-.header-merchandise .shopping{
-    position: relative;
-    text-align: right;
+.header-merchandise h1 {
+  font-weight: 600;
 }
-.header-merchandise .shopping img{
-    width: 40px;
+.header-merchandise .shopping {
+  position: relative;
+  text-align: right;
 }
-.header-merchandise .shopping span{
-    background: red;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    position: absolute;
-    top: -5px;
-    left: 80%;
-    padding: 3px 10px;
+.header-merchandise .shopping img {
+  width: 35px;
+}
+.header-merchandise .shopping span {
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  top: -5px;
+  left: 80%;
+  padding: 3px 10px;
 }
 
-.list{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
-    row-gap: 20px;
-    margin-top: 50px;
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-top: 50px;
 }
-.list .item{
-    text-align: center;
-    background-color: #DCE0E1;
-    padding: 20px;
-    box-shadow: 0 50px 50px #757676;
-    letter-spacing: 1px;
+.list .item {
+  text-align: center;
+  background-color: #eff5f7;
+  padding: 20px;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  -webkit-border-radius: 6px;
 }
-.list .item img{
-    width: 90%;
-    height: 430px;
-    object-fit: cover;
-}
-.list .item .title{
-    font-weight: 600;
-}
-.list .item .price{
-    margin: 10px;
-}
-.list .item button{
-    background-color: #1C1F25;
-    color: #fff;
-    width: 100%;
-    padding: 10px;
-}
-.card{
-    position: fixed;
-    top:0;
-    left: 100%;
-    width: 500px;
-    background-color: #453E3B;
-    height: 100vh;
-    transition: 0.5s;
-}
-.body-merchandise.active .card{
-    left: calc(100% - 500px);
-    
-}
-.body-merchandise.active .container{
-   transform: translateX(-200px);
-}
-.card h1{
-    color: #E8BC0E;
-    font-weight: 100;
-    margin: 0;
-    padding: 0 20px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-}
-.card .checkOut{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 
+.list .item img {
+  width: 90%;
+  height: 270px;
+  object-fit: cover;
 }
-.card .checkOut div{
-    background-color: #E8BC0E;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    cursor: pointer;
+.list .item .title {
+  font-weight: 400;
+  padding-top: 8px;
 }
-.card .checkOut div:nth-child(2){
-    background-color: #1C1F25;
-    color: #fff;
+.list .item .price {
+  margin: 10px;
+  font-weight: 600;
 }
-.listCard li{
-    display: grid;
-    grid-template-columns: 100px repeat(3, 1fr);
-    color: #fff;
-    row-gap: 10px;
-    font-weight: 600;
-    margin-bottom: 5px;
+.list .item button {
+  background-color: red;
+  color: #fff;
+  width: 100%;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  font-weight: bold;
+  margin-top: 15px;
 }
-.listCard li div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 500px;
+  background-color: white;
+  height: 100vh;
+  transition: 0.5s;
+  box-shadow: -10px 16px 40px 9px rgba(0, 0, 0, 0.1);
 }
-.listCard li img{
-    width: 90%;
+.body-merchandise.active .card {
+  left: calc(100% - 500px);
 }
-.listCard li button{
-    background-color: #fff5;
-    border: none;
-    padding: 3px;
+.body-merchandise.active .container {
+  transform: translateX(-200px);
 }
-.listCard .count{
-    margin: 0 10px;
+.card h1 {
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 18px 20px;
+  margin-bottom: 30px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.card .checkOut {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.card .checkOut div {
+  background-color: red;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+.card .checkOut div:nth-child(2) {
+  background-color: #1c1f25;
+  color: #fff;
+}
+.listCard {
+  padding: 0 20px;
+}
+.listCard .cart-title {
+  font-weight: 400;
+}
+.listCard .cart-price {
+  font-weight: 600;
+}
+.listCard li {
+  display: grid;
+  grid-template-columns: 100px repeat(3, 1fr);
+  color: #fff;
+  row-gap: 10px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 10px;
+}
+.listCard li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.listCard li img {
+  width: 60%;
+}
+.listCard li button {
+  background-color: red;
+  border: none;
+  padding: 3px 9px;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.listCard .count {
+  margin: 0 10px;
 }
