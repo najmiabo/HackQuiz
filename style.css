@@ -518,6 +518,19 @@ body {
     transform: translate(-50%, -50%) scale(1);
 }
 
+.popup-donateUs img {
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popup-donateUs p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 26px;
+}
+
 .popup-donateUs .exit-donateUs-btn {
     padding: 5px 8px;
     position: relative;
