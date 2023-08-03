@@ -17,6 +17,9 @@ const exitDonateUsBtn = document.querySelector(".exit-donateUs-btn");
 const merchandise = document.querySelector(".merchandise");
 const popupMerchandise = document.querySelector(".popup-merchandise");
 const exitMerchandiseBtn = document.querySelector(".exit-merchandise-btn");
+const popupCategory = document.querySelector(".popup-category");
+const sejarahBtn = document.querySelector(".sejarah-btn");
+const budayaBtn = document.querySelector(".budaya-btn");
 
 startBtn.onclick = () => {
   popupInfo.classList.add("active");
@@ -29,14 +32,16 @@ exitBtn.onclick = () => {
 };
 
 continueBtn.onclick = () => {
-  quizSection.classList.add("active");
+  popupCategory.classList.add("active");
   popupInfo.classList.remove("active");
-  main.classList.remove("active");
-  quizBox.classList.add("active");
+};
 
-  showQuestions(0);
-  questionCounter(1);
-  headerScore();
+sejarahBtn.onclick = () => {
+  setupQuiz(questionSejarah);
+};
+
+budayaBtn.onclick = () => {
+  setupQuiz(questionBudaya);
 };
 
 tryAgainBtn.onclick = () => {
@@ -65,6 +70,44 @@ goHomeBtn.onclick = () => {
   questionCounter(questionNumb);
 };
 
+let currentCategoryQuestions = null;
+
+function showQuestions(index) {
+  const questionText = document.querySelector(".question-text");
+  questionText.textContent = `${currentCategoryQuestions[index].numb}. ${currentCategoryQuestions[index].question
+    }`;
+
+  let optionTag = `<div class="option"><span>${currentCategoryQuestions[index].options[0]
+    }</span></div>
+        <div class="option"><span>${currentCategoryQuestions[index].options[1]
+    }</span></div>
+        <div class="option"><span>${currentCategoryQuestions[index].options[2]
+    }</span></div>
+        <div class="option"><span>${currentCategoryQuestions[index].options[3]
+    }</span></div>`;
+
+  optionList.innerHTML = optionTag;
+
+  const option = document.querySelectorAll(".option");
+  for (let i = 0; i < option.length; i++) {
+    option[i].setAttribute("onclick", "optionSelected(this)");
+  }
+}
+
+function setupQuiz(questions) {
+  currentCategoryQuestions = questions;
+  quizSection.classList.add("active");
+  popupCategory.classList.remove("active");
+  main.classList.remove("active");
+  quizBox.classList.add("active");
+
+  showQuestions(0);
+  questionCounter(1);
+  headerScore();
+}
+
+
+
 let questionCount = 0;
 let questionNumb = 1;
 let userScore = 0;
@@ -72,7 +115,7 @@ let userScore = 0;
 const nextBtn = document.querySelector(".next-btn");
 
 nextBtn.onclick = () => {
-  if (questionCount < questions.length - 1) {
+  if (questionCount < currentCategoryQuestions.length - 1) {
     questionCount++;
     showQuestions(questionCount);
 
@@ -86,15 +129,24 @@ nextBtn.onclick = () => {
 };
 
 const optionList = document.querySelector(".option-list");
-
 function showQuestions(index) {
   const questionText = document.querySelector(".question-text");
-  questionText.textContent = `${questions[index].numb}. ${questions[index].question}`;
+  questionText.textContent = `${currentCategoryQuestions[index].numb}. ${
+    currentCategoryQuestions[index].question
+  }`;
 
-  let optionTag = `<div class="option"><span>${questions[index].options[0]}</span></div>
-        <div class="option"><span>${questions[index].options[1]}</span></div>
-        <div class="option"><span>${questions[index].options[2]}</span></div>
-        <div class="option"><span>${questions[index].options[3]}</span></div>`;
+  let optionTag = `<div class="option"><span>${
+    currentCategoryQuestions[index].options[0]
+  }</span></div>
+        <div class="option"><span>${
+          currentCategoryQuestions[index].options[1]
+        }</span></div>
+        <div class="option"><span>${
+          currentCategoryQuestions[index].options[2]
+        }</span></div>
+        <div class="option"><span>${
+          currentCategoryQuestions[index].options[3]
+        }</span></div>`;
 
   optionList.innerHTML = optionTag;
 
@@ -104,9 +156,10 @@ function showQuestions(index) {
   }
 }
 
+
 function optionSelected(answer) {
   let userAnswer = answer.textContent;
-  let correctAnswer = questions[questionCount].answer;
+  let correctAnswer = currentCategoryQuestions[questionCount].answer;
   let allOptions = optionList.children.length;
 
   if (userAnswer === correctAnswer) {
@@ -132,12 +185,12 @@ function optionSelected(answer) {
 
 function questionCounter(index) {
   const questionTotal = document.querySelector(".question-total");
-  questionTotal.textContent = `${index} of ${questions.length} Questions`;
+  questionTotal.textContent = `${index} of ${questionSejarah.length} Questions`;
 }
 
 function headerScore() {
   const headerScoreText = document.querySelector(".header-score");
-  headerScoreText.textContent = `Score: ${userScore} / ${questions.length}`;
+  headerScoreText.textContent = `Score: ${userScore} / ${questionSejarah.length}`;
 }
 
 function showResultBox() {
@@ -145,21 +198,19 @@ function showResultBox() {
   resultBox.classList.add("active");
 
   const scoreText = document.querySelector(".score-text");
-  scoreText.textContent = `Your Score ${userScore} out of ${questions.length}`;
+  scoreText.textContent = `Your Score ${userScore} out of ${questionSejarah.length}`;
 
   const circularProgress = document.querySelector(".circular-progress");
   const progressValue = document.querySelector(".progress-value");
   let progressStartValue = -1;
-  let progressEndValue = (userScore / questions.length) * 100;
+  let progressEndValue = (userScore / questionSejarah.length) * 100;
   let speed = 20;
 
   let progress = setInterval(() => {
     progressStartValue++;
-    // console.log(progressStartValue);
     progressValue.textContent = `${progressStartValue}%`;
-    circularProgress.style.background = `conic-gradient(seagreen ${
-      progressStartValue * 3.6
-    }deg, rgba(255, 255, 255, .1) 0deg)`;
+    circularProgress.style.background = `conic-gradient(seagreen ${progressStartValue * 3.6
+      }deg, rgba(255, 255, 255, .1) 0deg)`;
 
     if (progressStartValue === progressEndValue) {
       clearInterval(progress);
@@ -187,7 +238,7 @@ for (let i = 0; i < myNodelist.length; i++) {
   myNodelist[i].appendChild(span);
 }
 
-// Click on a close button to hide the current list item
+
 let close = document.getElementsByClassName("close");
 
 for (let i = 0; i < close.length; i++) {
@@ -197,7 +248,7 @@ for (let i = 0; i < close.length; i++) {
   };
 }
 
-// Add a "checked" symbol when clicking on a list item
+
 const list = document.querySelector("ul");
 list.addEventListener(
   "click",
@@ -209,7 +260,7 @@ list.addEventListener(
   false
 );
 
-// Create a new list item when clicking on the "Add" button
+
 function newElement() {
   let li = document.createElement("li");
   let inputValue = document.getElementById("myInput").value;
@@ -330,13 +381,11 @@ function reloadCard() {
                 <div class="cart-title">${value.name}</div>
                 <div class="cart-price">Rp. ${value.price.toLocaleString()}</div>
                 <div>
-                    <button onclick="changeQuantity(${key}, ${
-        value.quantity - 1
-      })">-</button>
+                    <button onclick="changeQuantity(${key}, ${value.quantity - 1
+        })">-</button>
                     <div class="count">${value.quantity}</div>
-                    <button onclick="changeQuantity(${key}, ${
-        value.quantity + 1
-      })">+</button>
+                    <button onclick="changeQuantity(${key}, ${value.quantity + 1
+        })">+</button>
                 </div>`;
       listCard.appendChild(newDiv);
     }
