@@ -806,6 +806,7 @@ input {
 }
 .header-merchandise .shopping img {
   width: 35px;
+  cursor: pointer;
 }
 .header-merchandise .shopping span {
   background: red;
@@ -881,7 +882,7 @@ input {
 .body-merchandise.active .card {
   left: calc(100% - 500px);
 }
-.body-merchandise.active .container {
+.body-merchandise.active .container-merchandise {
   transform: translateX(-200px);
 }
 .card h1 {
