@@ -1,4 +1,4 @@
-let questions = [
+let questionSejarah = [
     {
         numb: 1,
         question: "Kapan Indonesia merdeka?",
@@ -57,3 +57,60 @@ let questions = [
 ]
 
 
+let questionBudaya = [
+    {
+        numb: 1,
+        question: "Alat musik Angklung berasal dari daerah?",
+        answer: "B. Jawa Barat",
+        options: [
+            "A. Papua",
+            "B. Jawa Barat",
+            "C. Sumatra Barat",
+            "D. Jawa Tengah"
+        ]
+    },
+    {
+        numb: 2,
+        question: "Tari Kecak berasal dari daerah?",
+        answer: "D. Bali",
+        options: [
+            "A. Padang",
+            "B. Maluku",
+            "C. Aceh",
+            "D. Bali"
+        ]
+    },
+    {
+        numb: 3,
+        question: "Berikut adalah makanan khas Manado, kecuali?",
+        answer: "C. Rawon",
+        options: [
+            "A. Ayam Woku",
+            "B. Cakalang Fufu",
+            "C. Rawon",
+            "D. Sambal Roa"
+        ]
+    },
+    {
+        numb: 4,
+        question: "Ampar Ampar Pisang adalah lagu yang berasal dari daerah..",
+        answer: "D. Kalimantan Selatan",
+        options: [
+            "A. Kalimantan Timur",
+            "B. Banten",
+            "C. Riau",
+            "D. Kalimantan Selatan"
+        ]
+    },
+    {
+        numb: 5,
+        question: "Kicir-kicir adalah lagu yang berasal dari daerah?",
+        answer: "B. DKI Jakarta",
+        options: [
+            "A. Jawa Timur",
+            "B. DKI Jakarta",
+            "C. Aceh",
+            "D. Jambi"
+        ]
+    }
+]
