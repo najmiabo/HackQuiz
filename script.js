@@ -178,62 +178,62 @@ exitTodoListBtn.onclick = () => {
 const myNodelist = document.getElementsByTagName("LI");
 
 for (let i = 0; i < myNodelist.length; i++) {
-  let span = document.createElement("SPAN");
-  let txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
+    let span = document.createElement("SPAN");
+    let txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
 }
 
 // Click on a close button to hide the current list item
 let close = document.getElementsByClassName("close");
 
 for (let i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    let div = this.parentElement;
-    div.style.display = "none";
-  }
+    close[i].onclick = function () {
+        let div = this.parentElement;
+        div.style.display = "none";
+    }
 }
 
 // Add a "checked" symbol when clicking on a list item
 const list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
+list.addEventListener('click', function (ev) {
+    if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
+    }
 }, false);
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {
-  let li = document.createElement("li");
-  let inputValue = document.getElementById("myInput").value;
-  let t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("Ketik sesuatu!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-  let span = document.createElement("SPAN");
-  let txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      let div = this.parentElement;
-      div.style.display = "none";
+    let li = document.createElement("li");
+    let inputValue = document.getElementById("myInput").value;
+    let t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+        alert("Ketik sesuatu!");
+    } else {
+        document.getElementById("myUL").appendChild(li);
     }
-  }
+    document.getElementById("myInput").value = "";
+
+    let span = document.createElement("SPAN");
+    let txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+            let div = this.parentElement;
+            div.style.display = "none";
+        }
+    }
 }
 
 donateUs.onclick = () => {
     main.classList.add('active');
     popupDonateUs.classList.add('active');
-    
+
 }
 
 exitDonateUsBtn.onclick = () => {
@@ -259,23 +259,22 @@ let body = document.querySelector('.body-merchandise');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
-openShopping.addEventListener('click', ()=>{
+openShopping.addEventListener('click', () => {
     body.classList.add('active');
 })
-closeShopping.addEventListener('click', ()=>{
+closeShopping.addEventListener('click', () => {
     body.classList.remove('active');
 })
 
-let products = [
-    {
+let products = [{
         id: 1,
-        name: 'KAOS POLOS',
+        name: 'KAOS',
         image: 'images/1.PNG',
         price: 50000
     },
     {
         id: 2,
-        name: 'BENDERA INDONESIA',
+        name: 'BENDERA',
         image: 'images/2.PNG',
         price: 35000
     },
@@ -286,36 +285,39 @@ let products = [
         price: 15000
     }
 ];
-let listCards  = [];
-function initApp(){
-    products.forEach((value, key) =>{
+let listCards = [];
+
+function initApp() {
+    products.forEach((value, key) => {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         newDiv.innerHTML = `
-            <img src="image/${value.image}">
+            <img src="${value.image}">
             <div class="title">${value.name}</div>
             <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Add To Card</button>`;
+            <button onclick="addToCard(${key})">Add To Cart</button>`;
         lists.appendChild(newDiv);
     })
 }
 initApp();
-function addToCard(key){
-    if(listCards[key] == null){
+
+function addToCard(key) {
+    if (listCards[key] == null) {
         // copy product form list to list card
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
         listCards[key].quantity = 1;
     }
     reloadCard();
 }
-function reloadCard(){
+
+function reloadCard() {
     listCard.innerHTML = '';
     let count = 0;
     let totalPrice = 0;
-    listCards.forEach((value, key)=>{
+    listCards.forEach((value, key) => {
         totalPrice = totalPrice + value.price;
         count = count + value.quantity;
-        if(value != null){
+        if (value != null) {
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
                 <div><img src="image/${value.image}"/></div>
@@ -326,16 +328,17 @@ function reloadCard(){
                     <div class="count">${value.quantity}</div>
                     <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
                 </div>`;
-                listCard.appendChild(newDiv);
+            listCard.appendChild(newDiv);
         }
     })
     total.innerText = totalPrice.toLocaleString();
     quantity.innerText = count;
 }
-function changeQuantity(key, quantity){
-    if(quantity == 0){
+
+function changeQuantity(key, quantity) {
+    if (quantity == 0) {
         delete listCards[key];
-    }else{
+    } else {
         listCards[key].quantity = quantity;
         listCards[key].price = quantity * products[key].price;
     }

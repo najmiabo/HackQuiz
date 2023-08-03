@@ -830,6 +830,7 @@ input {
     color: #fff;
     row-gap: 10px;
     font-weight: 600;
+    margin-bottom: 5px;
 }
 .listCard li div{
     display: flex;
@@ -842,7 +843,7 @@ input {
 .listCard li button{
     background-color: #fff5;
     border: none;
-    padding: 8px;
+    padding: 3px;
 }
 .listCard .count{
     margin: 0 10px;
