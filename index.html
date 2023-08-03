@@ -15,9 +15,9 @@
 
             <nav class="navbar">
                 <a href="#" class="active">Home</a>
-                <a href="#">About</a>
-                <a href="#">Donate-us!</a>
-                <a href="#">Merch</a>
+                <a href="#">Merchandise</a>
+                <a href="#" class="donate-us">Donate-us!</a>
+                <a href="#" class="todo-list">To-Do List</a>
             </nav>
         </header>
 
@@ -90,6 +90,30 @@
             <button class="info-btn exit-btn">Exit Quiz</button>
             <a href="#" class="info-btn continue-btn">Continue</a>
         </div>
+    </div>
+
+    <!-- TO DO LIST -->
+    <div class="popup-todoList">
+        <button class="exit-todoList-btn">x</button>
+        <div id="myDIV" class="header-todoList">
+            <h2>List Kegiatan Kemerdekaan</h2>
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+          </div>
+          
+          <ul id="myUL">
+            <li>Pasang Bendera dihalaman</li>
+            <li class="checked">Mengikuti Lomba Agustusan</li>
+            <li>Mendengarkan lagu Indonesia Raya</li>
+            <li>Mendengarkan Lagu 17 Agustus 45</li>
+          </ul>
+    </div>
+
+    <!-- Donate US -->
+    <div class="popup-donateUs">
+        <button class="exit-donateUs-btn">x</button>
+        <p>E-mail</p>
+        <input type="email">
     </div>
 
     <script src="questions.js"></script>
