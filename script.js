@@ -407,7 +407,7 @@ function changeQuantity(key, quantity) {
 total.addEventListener("click", () => {
   let counter = listCard.getElementsByTagName('li').length
   if (counter == 0) {
-    alert('Cart is empty');
+    alert('Anda belum memesan apapun!');
   }
 });
 
