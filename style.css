@@ -585,7 +585,7 @@ body {
     position: relative;
     margin: 0;
     left: 97%;
-    /* margin-bottom: 8px; */
+    margin-bottom: 8px;
     width: 40px;
     height: 40px;
     background: #f44336;
@@ -601,13 +601,13 @@ body {
     transition: .3s;
 }
 
-ul {
+.todo-li {
     margin: 0;
     padding: 0;
 }
 
 /* Style the list items */
-ul li {
+.todo-li li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
@@ -623,24 +623,24 @@ ul li {
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
+.todo-li li:nth-child(odd) {
     background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
-ul li:hover {
+.todo-li li:hover {
     background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
-ul li.checked {
+.todo-li li.checked {
     background: #888;
     color: #fff;
     text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
-ul li.checked::before {
+.todo-li li.checked::before {
     content: '';
     position: absolute;
     border-color: #fff;
@@ -827,8 +827,9 @@ input {
 .listCard li{
     display: grid;
     grid-template-columns: 100px repeat(3, 1fr);
-    color: black;
+    color: #fff;
     row-gap: 10px;
+    font-weight: 600;
 }
 .listCard li div{
     display: flex;
@@ -839,7 +840,7 @@ input {
     width: 90%;
 }
 .listCard li button{
-    background-color: gray;
+    background-color: #fff5;
     border: none;
     padding: 8px;
 }
