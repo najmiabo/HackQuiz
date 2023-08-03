@@ -15,7 +15,7 @@
 
             <nav class="navbar">
                 <a href="#" class="active">Home</a>
-                <a href="#">Merchandise</a>
+                <a href="#" class="merchandise">Merchandise</a>
                 <a href="#" class="donate-us">Donate-us!</a>
                 <a href="#" class="todo-list">To-Do List</a>
             </nav>
@@ -97,16 +97,16 @@
         <button class="exit-todoList-btn">x</button>
         <div id="myDIV" class="header-todoList">
             <h2>List Kegiatan Kemerdekaan</h2>
-            <input type="text" id="myInput" placeholder="Title...">
+            <input type="text" id="myInput" placeholder="Kegiatan...">
             <span onclick="newElement()" class="addBtn">Add</span>
-          </div>
-          
-          <ul id="myUL">
+        </div>
+
+        <ul id="myUL">
             <li>Pasang Bendera dihalaman</li>
             <li class="checked">Mengikuti Lomba Agustusan</li>
             <li>Mendengarkan lagu Indonesia Raya</li>
             <li>Mendengarkan Lagu 17 Agustus 45</li>
-          </ul>
+        </ul>
     </div>
 
     <!-- Donate US -->
@@ -115,6 +115,37 @@
         <p>Scan me!</p>
         <img src="images/rickroll.png" alt="QR">
     </div>
+
+    <!-- MERCHANDISE -->
+    <div class="popup-merchandise">
+        <button class="exit-merchandise-btn">x</button>
+        <div class="body-merchandise">
+            <div class="container-merchandise">
+                <div class="header-merchandise">
+                    <h1>Our Merchandise</h1>
+                    <div class="shopping">
+                        <img src="images/shoppingBag.png">
+                        <span class="quantity">0</span>
+                    </div>
+                </div>
+        
+                <div class="list">
+                  
+                </div>
+            </div>
+            <div class="card">
+                <h1>Keranjang</h1>
+                <ul class="listCard">
+                </ul>
+                <div class="checkOut">
+                    <div class="total">0</div>
+                    <div class="closeShopping">Close</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
 
     <script src="questions.js"></script>
     <script src="script.js"></script>
